@@ -20,7 +20,12 @@ svg {
   align-items: center;
   justify-content: center;
 }
-
+.jumbo {
+  font-family: "Condiment", sans-serif;
+  font-size: 5rem;
+  transform: rotate(-15deg);
+  text-shadow: 2px 2px #f51f1f;
+}
 .kick-pad,
 .snare-pad,
 .hihat-pad {
