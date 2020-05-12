@@ -2,6 +2,7 @@ class DrumKit {
   constructor() {
     this.pads = document.querySelectorAll(".pad");
     this.playBtn = document.querySelector(".play");
+    this.clearBtn = document.querySelector(".clear");
     this.currentKick = "./sounds/kick-classic.wav";
     this.currentSnare = "./sounds/snare-acoustic01.wav";
     this.currentHihat = "./sounds/hihat-acoustic01.wav";
@@ -21,7 +22,7 @@ class DrumKit {
   }
 
   activePad() {
-    console.log(this);
+    // console.log(this);
     this.classList.toggle("active");
   }
 
@@ -30,7 +31,7 @@ class DrumKit {
     const activeBars = document.querySelectorAll(`.b${step}`);
     // loop over pads
     activeBars.forEach((bar) => {
-      console.log(bar);
+      // console.log(bar);
       bar.style.animation = `playTrack 0.2s alternate ease-in-out 2`;
       // check if pad is active, play sound
       if (bar.classList.contains("active")) {
@@ -162,6 +163,25 @@ class DrumKit {
       this.start();
     }
   }
+
+  clearBoard() {
+    const activePads = document.querySelectorAll(".pad.active");
+    console.log(activePads);
+
+    activePads.forEach((activePad) => {
+      activePad.classList.remove("active");
+    });
+
+    this.updateButton();
+
+    this.index = 0;
+
+    if (this.isPlaying) {
+      //clear interval
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    }
+  }
 }
 
 const drumKit = new DrumKit();
@@ -198,4 +218,8 @@ drumKit.tempoSlider.addEventListener("input", function (e) {
 
 drumKit.tempoSlider.addEventListener("change", function (e) {
   drumKit.updateTempo(e);
+});
+
+drumKit.clearBtn.addEventListener("click", function (e) {
+  drumKit.clearBoard();
 });
