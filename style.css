@@ -22,13 +22,11 @@ svg {
 }
 .jumbo {
   font-family: "Condiment", sans-serif;
-  font-size: 5rem;
-  /* transform: rotate(-15deg); */
+  font-size: 4rem;
   text-shadow: 2px 2px #f51f1f;
 }
-.kick-pad,
-.snare-pad,
-.hihat-pad {
+
+.pad {
   width: 4.5rem;
   height: 4.5rem;
   margin: 1rem 0.5rem;
@@ -47,6 +45,10 @@ svg {
   background: rgb(238, 183, 138);
 }
 
+.clap-pad {
+  background: rgb(238, 138, 230);
+}
+
 .kick-pad.active {
   background: rgb(53, 132, 177);
 }
@@ -59,9 +61,14 @@ svg {
   background: rgb(169, 125, 89);
 }
 
+.clap-pad.active {
+  background: rgb(180, 51, 169);
+}
+
 .hihat-track,
 .snare-track,
-.kick-track {
+.kick-track,
+.clap-track {
   display: flex;
   align-items: center;
   width: 90%;
@@ -71,7 +78,8 @@ svg {
 
 .kick,
 .snare,
-.hihat {
+.hihat,
+.clap {
   display: flex;
 }
 
