@@ -241,11 +241,3 @@ drumKit.tempoSlider.addEventListener("change", function (e) {
 drumKit.clearBtn.addEventListener("click", function (e) {
   drumKit.clearBoard();
 });
-
-let drag = false;
-
-document.addEventListener("mousedown", () => (drag = false));
-document.addEventListener("mousemove", () => (drag = true));
-document.addEventListener("mouseup", () =>
-  console.log(drag ? "drag" : "click")
-);
