@@ -23,14 +23,14 @@ svg {
 .jumbo {
   font-family: "Condiment", sans-serif;
   font-size: 5rem;
-  transform: rotate(-15deg);
+  /* transform: rotate(-15deg); */
   text-shadow: 2px 2px #f51f1f;
 }
 .kick-pad,
 .snare-pad,
 .hihat-pad {
-  width: 5rem;
-  height: 5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   margin: 1rem 0.5rem;
   cursor: pointer;
 }
@@ -64,7 +64,7 @@ svg {
 .kick-track {
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 90%;
   justify-content: space-between;
   margin-top: 3.5rem;
 }
@@ -76,11 +76,19 @@ svg {
 }
 
 .controls {
+  text-align: center;
+}
+
+.controls-title {
+  margin-bottom: 1rem;
+}
+
+.controls-actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  margin: 0rem 2rem;
+  /* margin: 0rem 2rem; */
 }
 
 .controls button {
@@ -110,6 +118,9 @@ svg {
 select {
   padding: 1rem;
   font-size: 1rem;
+}
+.mute {
+  margin-right: 1rem;
 }
 
 .mute.active {
