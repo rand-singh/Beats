@@ -3,6 +3,7 @@ class DrumKit {
     this.pads = document.querySelectorAll(".pad");
     this.playBtn = document.querySelector(".play");
     this.clearBtn = document.querySelector(".clear");
+
     this.currentKick = "./sounds/kick-classic.wav";
     this.currentSnare = "./sounds/snare-acoustic01.wav";
     this.currentHihat = "./sounds/hihat-acoustic01.wav";
@@ -108,7 +109,7 @@ class DrumKit {
         this.hihatAudio.src = selectionValue;
         break;
       case "clap-select":
-        this.hihatAudio.src = selectionValue;
+        this.clapAudio.src = selectionValue;
         break;
       case "perc-select":
         this.percAudio.src = selectionValue;
