@@ -53,6 +53,10 @@ svg {
   background: rgb(254, 160, 160);
 }
 
+.tom-pad {
+  background: rgb(160, 254, 245);
+}
+
 .kick-pad.active {
   background: rgb(53, 132, 177);
 }
@@ -73,11 +77,16 @@ svg {
   background: rgb(255, 87, 87);
 }
 
+.tom-pad.active {
+  background: rgb(88, 196, 186);
+}
+
 .hihat-track,
 .snare-track,
 .kick-track,
 .clap-track,
-.perc-track {
+.perc-track,
+.tom-track {
   display: flex;
   align-items: center;
   width: 90%;
@@ -89,7 +98,8 @@ svg {
 .snare,
 .hihat,
 .clap,
-.perc {
+.perc,
+.tom {
   display: flex;
 }
 
@@ -173,6 +183,6 @@ select {
     transform: scale(1);
   }
   to {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }

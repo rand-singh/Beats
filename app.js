@@ -8,11 +8,15 @@ class DrumKit {
     this.currentHihat = "./sounds/hihat-acoustic01.wav";
     this.currentClap = "./sounds/clap-808.wav";
     this.currentPerc = "./sounds/perc-808.wav";
+    this.currentTom = "./sounds/tom-808.wav";
+
     this.kickAudio = document.querySelector(".kick-sound");
     this.snareAudio = document.querySelector(".snare-sound");
     this.hihatAudio = document.querySelector(".hihat-sound");
     this.clapAudio = document.querySelector(".clap-sound");
     this.percAudio = document.querySelector(".perc-sound");
+    this.tomAudio = document.querySelector(".tom-sound");
+
     this.index = 0; // track our postion in the track timeline
     this.bpm = 150;
     this.isPlaying = null;
@@ -54,6 +58,10 @@ class DrumKit {
         if (bar.classList.contains("perc-pad")) {
           this.percAudio.currentTime = 0;
           this.percAudio.play();
+        }
+        if (bar.classList.contains("tom-pad")) {
+          this.tomAudio.currentTime = 0;
+          this.tomAudio.play();
         }
       }
     });
@@ -105,6 +113,9 @@ class DrumKit {
       case "perc-select":
         this.percAudio.src = selectionValue;
         break;
+      case "tom-select":
+        this.tomAudio.src = selectionValue;
+        break;
     }
   }
 
@@ -128,6 +139,9 @@ class DrumKit {
         case "4":
           this.percAudio.volume = 0;
           break;
+        case "5":
+          this.tomAudio.volume = 0;
+          break;
       }
     } else {
       switch (muteIndex) {
@@ -145,6 +159,9 @@ class DrumKit {
           break;
         case "4":
           this.percAudio.volume = 1;
+          break;
+        case "5":
+          this.tomAudio.volume = 1;
           break;
       }
     }
