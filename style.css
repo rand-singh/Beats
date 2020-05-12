@@ -49,6 +49,10 @@ svg {
   background: rgb(238, 138, 230);
 }
 
+.perc-pad {
+  background: rgb(254, 160, 160);
+}
+
 .kick-pad.active {
   background: rgb(53, 132, 177);
 }
@@ -65,10 +69,15 @@ svg {
   background: rgb(180, 51, 169);
 }
 
+.perc-pad.active {
+  background: rgb(255, 87, 87);
+}
+
 .hihat-track,
 .snare-track,
 .kick-track,
-.clap-track {
+.clap-track,
+.perc-track {
   display: flex;
   align-items: center;
   width: 90%;
@@ -79,7 +88,8 @@ svg {
 .kick,
 .snare,
 .hihat,
-.clap {
+.clap,
+.perc {
   display: flex;
 }
 
